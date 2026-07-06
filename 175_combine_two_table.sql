@@ -1,5 +1,4 @@
 # Write your MySQL query statement below
-select email as Email
-from Person
-group by email
-having count(email) > 1;
+select p.firstName, p.lastName, a.city, a.state
+from Person p
+left join Address a on p.personId = a.personId;
